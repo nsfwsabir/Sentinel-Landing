@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import { ThemeToggle } from "./components/theme-toggle";
 import { GutterSides } from "./components/gutter-sides";
 import { IntroOverlay } from "./components/intro-overlay";
@@ -74,6 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               the content column. Asleep until hovered. */}
           <GutterSides />
           <IntroOverlay />
+          <Analytics />
           <footer className="mt-20 border-t border-neutral-200 dark:border-neutral-800">
             <div className="mx-auto flex w-full max-w-[1440px] flex-wrap items-center justify-between gap-3 px-5 py-6 text-xs text-neutral-500 lg:px-8 dark:text-neutral-400">
               <span className="flex items-center gap-2">
